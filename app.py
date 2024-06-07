@@ -80,7 +80,7 @@ with open("word2vec_profanity.pkl", "rb") as file:
 
 def check_profanity(user_input, model, similarity_threshold=0.3):
     user_input = user_input.lower()
-    user_input = user_input.replace('_', ' ').replace(',', ' ')
+    user_input = user_input.replace('_', ' ').replace(',', ' ').replace('of','')
     user_input = user_input.split()
     profane_words = []
 
